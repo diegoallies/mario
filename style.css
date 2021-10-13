@@ -1,0 +1,81 @@
+body {
+  background: lightblue;
+  text-align: center;
+}
+
+.wrapper{
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+img {
+  /**************************** Transform ****************************/
+
+  /* moves the element from on side of the page to the next */
+  /* positive value (200px) will go to the right and negative value (-200px) will go to the left  */
+  /* Moves horizontally */
+  /* transform: translateX(200px); */
+
+  /* Moves vertically */
+  /* transform: translateY(200px); */
+
+  /* Moves both horizonatall and vertically, first value is x-axis and second value is y-axis */
+  /* transform: translate(-200px, 200px); */
+
+  /* Whole numbers expand value and decimals shrink the value on the x-axis */
+  /* transform: scaleX(1); */
+  
+  /* Whole numbers expand value and decimals shrink the value on the x-axis */
+  /* transform: scaleY(3); */
+  
+  /* Scales for both x and y axis */
+  /* transform: scale(1,3); */
+
+  /* rotates on the x-axis */
+  /* transform: rotateX(60deg); */
+
+  /* rotates on the y-axis */
+  /* transform: rotateY(60deg); */
+
+  /* rotates acording to the degrees on both axis */
+  /* transform: rotateZ(45deg); */
+
+  /* Short hand for transform */
+  /* transform: rotateZ(-90deg) translateY(200px) scale(2); */
+
+  /**************************** Transitions ****************************/
+
+}
+
+.circle {
+  width: 100px;
+  padding: 50px 0;
+  line-height: 0;
+  margin: 60px auto;
+  background: pink;
+  color: white;
+  border-radius: 50px;
+  cursor: pointer;
+  /* 1s means it will take one second to change everything (the colour and rotate 360 degrees)*/
+  transition: 1s;
+  
+  /* We can specify which element we want to transition and for how muxh time */
+  /* transition: background 2s, transform 0.3s; */
+  
+  /* We can include a delay to the transition by adding two times */
+  /* transition: background 1s, transform 0.3s 1s; */
+  
+  /* linear means it never speeds up and never slows down */
+  /* transition: background 1s, transform 1s 1s linear; */
+  
+  /* ease-in starts off slower then speeds up */
+  transition: background 1s, transform 1s 1s ease-in;
+
+  
+}
+
+.circle:hover {
+  background: salmon;
+  transform: rotate(360deg);
+}
